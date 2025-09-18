@@ -26,10 +26,6 @@ class MainActivity : ComponentActivity() {
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
                     )*/
-                    InicioScreen(
-                        modifier = Modifier.padding(innerPadding)
-                    )
-
                     JaponScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
