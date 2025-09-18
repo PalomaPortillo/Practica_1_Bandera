@@ -12,7 +12,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.practica_1_bandera.screens.JaponScreen
-import com.example.practica_1_bandera.screens.InicioScreen
 import com.example.practica_1_bandera.ui.theme.Practica_1_BanderaTheme
 
 class MainActivity : ComponentActivity() {
@@ -36,8 +35,8 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
+fun Greeting(name: String, modifier: Modifier = Modifier) { // Si name tiene un valor por defecto,
+    Text(                                                   // se recomienda poner modifier primero
         text = "Hello $name!",
         modifier = modifier
     )
