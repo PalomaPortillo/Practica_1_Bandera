@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.practica_1_bandera.screens.BanderaScreen
+import com.example.practica_1_bandera.screens.JaponScreen
 import com.example.practica_1_bandera.screens.InicioScreen
 import com.example.practica_1_bandera.ui.theme.Practica_1_BanderaTheme
 
@@ -30,7 +30,9 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.padding(innerPadding)
                     )
 
-                    BanderaScreen()
+                    JaponScreen(
+                        modifier = Modifier.padding(innerPadding)
+                    )
                 }
             }
         }

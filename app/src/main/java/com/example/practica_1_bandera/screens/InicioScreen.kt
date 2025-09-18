@@ -8,18 +8,17 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.example.practica_1_bandera.Greeting
 import com.example.practica_1_bandera.R
 import com.example.practica_1_bandera.ui.theme.Practica_1_BanderaTheme
 
@@ -31,8 +30,7 @@ fun InicioScreen(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun BanderaScreen(modifier: Modifier = Modifier) {
-    val green = Color(0xFF006847)
+fun JaponScreen(modifier: Modifier = Modifier) {
     val white = Color.White
     val red = Color(0xFFCE1126)
 
@@ -41,31 +39,16 @@ fun BanderaScreen(modifier: Modifier = Modifier) {
             modifier = modifier
                 .weight(1f) // cada franja ocupa 1/3 del alto
                 .fillMaxWidth().height(200.dp)
-                .background(green)
-        )
-
-        Box(
-            modifier = modifier
-                .weight(1f)
-                .fillMaxWidth().height(200.dp)
                 .background(white),
-            contentAlignment = Alignment.Center
-        ) {
-            Image(
-                painter = painterResource(id = R.drawable.coat_of_arms), // carga drawable vectorial
-                contentDescription = "Escudo de México",
-                modifier = Modifier
-                    .height(120.dp)           // controla tamaño del escudo
-                    .aspectRatio(1f)          // mantiene proporción 1:1
+                contentAlignment = Alignment.Center
+        ){
+            Box(
+                modifier = modifier
+                    .size(50.dp)
+                    .fillMaxWidth().height(200.dp)
+                    .background(red, shape = CircleShape)
             )
         }
-
-        Box(
-            modifier = modifier
-                .weight(1f)
-                .fillMaxWidth().height(200.dp)
-                .background(red)
-        )
     }
 }
 
@@ -74,6 +57,6 @@ fun BanderaScreen(modifier: Modifier = Modifier) {
 @Composable
 fun FlagPreview() {
     Practica_1_BanderaTheme {
-        BanderaScreen()
+        JaponScreen()
     }
 }
