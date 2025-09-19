@@ -16,14 +16,21 @@ import androidx.compose.ui.unit.dp
 import com.example.practica_1_bandera.ui.theme.Practica_1_BanderaTheme
 
 @Composable
-fun JaponScreen(modifier: Modifier = Modifier) {
+fun ArgentinaScreen(modifier: Modifier = Modifier) {
     val white = Color.White
-    val red = Color(0xFFCE1126)
+    val blue = Color(0xFF74ACDF)
 
     Row(modifier = modifier) {
         Box(
             modifier
-                .weight(1f) // cada franja ocupa 1/3 del alto
+                .weight(1f)
+                .fillMaxWidth().height(200.dp)
+                .background(blue)
+        )
+
+        Box(
+            modifier
+                .weight(1f)
                 .fillMaxWidth().height(200.dp)
                 .background(white),
                 contentAlignment = Alignment.Center
@@ -32,9 +39,16 @@ fun JaponScreen(modifier: Modifier = Modifier) {
                 modifier
                     .size(50.dp)
                     .fillMaxWidth().height(200.dp)
-                    .background(red, shape = CircleShape)
+                    .background(white)
             )
         }
+
+        Box(
+            modifier
+                .weight(1f)
+                .fillMaxWidth().height(200.dp)
+                .background(blue)
+        )
     }
 }
 
@@ -43,7 +57,7 @@ fun JaponScreen(modifier: Modifier = Modifier) {
 @Composable
 fun FlagPreview() {
     Practica_1_BanderaTheme {
-        JaponScreen()
+        ArgentinaScreen()
     }
 }
 
