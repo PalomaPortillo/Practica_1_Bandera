@@ -11,8 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.practica_1_bandera.screens.BanderaScreen
 import com.example.practica_1_bandera.screens.InicioScreen
+import com.example.practica_1_bandera.screens.MexicoScreen
 import com.example.practica_1_bandera.ui.theme.Practica_1_BanderaTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Practica_1_BanderaTheme {
-                Scaffold(modifier = Modifier.fillMaxSize(), topBar = {}) { innerPadding ->
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     /*Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
@@ -29,8 +29,9 @@ class MainActivity : ComponentActivity() {
                     InicioScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
-
-                    BanderaScreen()
+                    MexicoScreen(
+                        modifier = Modifier.padding(innerPadding)
+                    )
                 }
             }
         }
