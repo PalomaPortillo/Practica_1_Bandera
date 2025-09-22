@@ -46,11 +46,11 @@ fun MexicoScreen(modifier: Modifier = Modifier) {
             contentAlignment = Alignment.Center
         ) {
             Image(
-                painter = painterResource(id = R.drawable.coat_of_arms), // carga drawable vectorial
+                painter = painterResource(R.drawable.aguila_logo),
                 contentDescription = "Escudo de México",
                 modifier = Modifier
-                    .height(120.dp)           // controla tamaño del escudo
-                    .aspectRatio(1f)          // mantiene proporción 1:1
+                    .height(120.dp)
+                    .aspectRatio(1f)
             )
         }
         Box(
