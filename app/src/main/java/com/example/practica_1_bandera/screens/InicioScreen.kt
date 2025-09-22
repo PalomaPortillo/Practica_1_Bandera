@@ -41,7 +41,7 @@ fun ArgentinaScreen(modifier: Modifier = Modifier) {
             Image(
                 painter = painterResource(id = R.drawable.sol_de_mayo),
                 contentDescription = "Sol de Mayo",
-                modifier = Modifier.size(120.dp) // ajusta el tamaño
+                modifier = Modifier.size(120.dp)
             )
         }
 
